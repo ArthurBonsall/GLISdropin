@@ -1,0 +1,11 @@
+Package: GLISdropin
+Title: An Example Package for the GLIS Drop-In Meeting
+Version: 1.0
+Authors@R: 
+    person("Arthur", "Bonsall", , "Arthur.bonsall@ontario.ca", role = c("aut", "cre"))
+Description: This package was created for a demonstration on how to use Git and GitHub to update packages.
+License: use_mit_license()
+Encoding: UTF-8
+Suggests: glfishr
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
