@@ -1,1 +1,1 @@
-This R package represents an example used during a GLIS Drop-In Session.
+This is an example R package created for a GLIS Drop-In session.
