@@ -1,5 +1,5 @@
 Package: GLISdropin
-Title: An Example Package for the GLIS Drop-In Meeting
+Title: An example package for the GLIS Drop-In Meeting.
 Version: 1.0
 Authors@R: 
     person("Arthur", "Bonsall", , "Arthur.bonsall@ontario.ca", role = c("aut", "cre"))
