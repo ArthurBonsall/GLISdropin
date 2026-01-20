@@ -7,7 +7,7 @@
 fav_fish <- function(SPC_Code){
 
   #Check to ensure only one fish is specified
-  if(length(SPC_Code) > 1){stop("Multiple fish have been specified. You can choose only a single fish to be your favourite!")}
+  if(length(SPC_Code) > 1){stop("TESTING MERGE CONFLICTS")}
 
   #Add a leading zero if required
   if(nchar(SPC_Code) == 2){SPC_Code = paste0("0", SPC_Code)}
