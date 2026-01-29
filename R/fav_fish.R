@@ -22,3 +22,33 @@ fav_fish <- function(SPC_Code){
   }
 }
 
+# install.packages
+
+library(dplyr)
+library(ggplot2)
+
+set.seed(42)
+species <- c("Walleye", "Lake Trout", "Smallmouth Bass", "Northern Pike", "Yellow Perch")
+
+# Simulate 30 favourite choices
+favorites <- sample(species, size = 30, replace = TRUE)
+
+# Summarize counts; keep all species (even 0) and preserve order
+df_counts <- data.frame(favorite = favorites) |>
+  count(favorite, name = "n") |>
+  right_join(data.frame(favorite = species), by = "favorite") |>
+  mutate(n = tidyr::replace_na(n, 0L),
+         favorite = factor(favorite, levels = species))
+
+# Plot
+ggplot(df_counts, aes(x = favorite, y = n)) +
+  geom_col(fill = "#457b9d", color = "black", width = 0.7) +
+  geom_text(aes(label = n), vjust = -0.4, size = 4) +
+  labs(
+    title = "Favourite Fish Species (n = 30)",
+    x = "Species",
+    y = "Number of People"
+  ) +
+  ylim(0, max(df_counts$n) + 2) +
+  theme_minimal(base_size = 12) +
+  theme(axis.text.x = element_text(angle = 15, hjust = 1))
