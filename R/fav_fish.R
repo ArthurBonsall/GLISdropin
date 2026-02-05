@@ -3,6 +3,7 @@
 #' This function takes an MNR species code and outputs a test string identifying your favourite fish.
 #'
 #' Additional text
+#' Additional text by steve
 #'
 #' @export
 fav_fish <- function(SPC_Code){
