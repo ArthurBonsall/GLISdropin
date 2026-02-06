@@ -2,7 +2,7 @@
 #'
 #' This function takes an MNR species code and outputs a test string identifying your favourite fish.
 #'
-#' Additional text
+#' This is an example piece of text to identify if the UAT version of GIT passes testing.
 #'
 #' @export
 fav_fish <- function(SPC_Code){
